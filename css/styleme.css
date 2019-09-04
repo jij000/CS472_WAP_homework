@@ -11,9 +11,30 @@ h1 {
     color: blue;
     font-family: Georgia;
 }
+
 a {
     color: orange;
 }
+
+a:link {
+    text-decoration: none;
+    color: blue
+}
+
+a:active {
+    text-decoration: blink
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red
+}
+
+a:visited {
+    text-decoration: none;
+    color: green
+}
+
 h2 {
     color: green;
     font-family: "Courier New";
@@ -28,4 +49,39 @@ p {
     text-align: left;
     font-size: 3vw;
     font-weight: bold;
+}
+
+p.rotate {
+    transform: rotateX(-180deg);
+    direction: ltr;
+}
+
+P.rotate:first-letter {
+    font-size: 6vm;
+    float: left;
+    /* margin-top: 0.15em; */
+}
+
+dt {
+    color: yellow;
+    font-weight: bold;
+}
+
+ol {
+    list-style: none;
+    counter-reset: reverse 4;
+}
+
+ol>li:before {
+    content: counter(reverse) '.';
+    display: block;
+    position: absolute;
+    left: -30px;
+    text-align: right;
+    width: 20px;
+}
+
+ol>li {
+    counter-increment: reverse -1;
+    position: relative;
 }
