@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML,CSS" />
+    <link href="css/styleWorkshopRegistration.css" type="text/css" rel="stylesheet" />
+    <title>Workshop Registration</title>
+</head>
+
+<body>
+    <h1>Workshop Registration</h1>
+    <p>Register now while seats are availiable!</p>
+    <form>
+        <div id="divMain">
+            <div id="divLeft">
+                <label class ="label" for="firstName">First Name</label>
+                <input class ="input" type="text" name="firstName" id="firstName" />
+                </span><label for="lastName">Lasts Name</label>
+                <input type="text" name="lastName" id="lastName" />
+                <label for="company">Company / Institution</label>
+                <input type="text" name="company" id="company" />
+                <label for="address">Address</label>
+                <textarea name="address" id="address" rows="5"></textarea>
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" />
+                <label for="state">State / Province / Region</label>
+                <select name="state" id="state">
+                    <option value="" selected>-Select-</option>
+                    <option>Iowa</option>
+                </select>
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option value="" selected>-Select-</option>
+                    <option>USA</option>
+                </select>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" name="phoneNumber" id="phoneNumber" />
+            </div>
+            <div id="divRight">
+                <p>Lunch</p><p></p>
+                <label for="mealPreference">Meal Preference</label>
+                <select name="mealPreference" id="mealPreference">
+                    <option value="Vegetarian" selected>Vegetarian</option>
+                    <option value="Meat">Meat</option>
+                </select>
+                <p>Payment Details</p><p></p>
+                <label for="paymentMode">Payment Mode</label><p></p>
+                <input type="checkbox" name="cash" value="cash" />cash
+                <input type="checkbox" name="cheque" value="cheque" />cheque
+                <input type="checkbox" name="demandDraft" value="demandDraft" />Demand Draft
+                <label for="chequeNo">DD / Cheque No.</label>
+                <input type="text" name="chequeNo" id="chequeNo" />
+                <label for="drawnOn">Drawn On (Bank Name)</label>
+                <input type="text" name="drawnOn" id="drawnOn" />
+                <label for="payable">Payable at</label>
+                <input type="text" name="payable" id="payable" />
+            </div>
+        </div>
+        <div id="divBottom">
+            <input type="submit" name="submit" id="submit" value="Submit" />
+            <input type="reset" name="reset" id="reset" value="Reset" />
+        </div>
+    </form>
+
+    <p>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="http://www.w3.org/Icons/valid-xhtml10" alt=" Validate " />
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png" alt=" Validate " />
+        </a>
+    </p>
+</body>
+
+</html>

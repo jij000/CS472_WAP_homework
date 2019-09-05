@@ -1,0 +1,46 @@
+div#divMain {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+}
+
+div#divLeft {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    flex:1;
+    margin: 1em;
+}
+div#divRight {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    flex:1;
+    margin: 1em;
+}
+
+div#divBottom {
+    text-align: center;
+}
+
+
+h1 {
+    background-color: rgba(138,188,159,1);
+    font-family: Georgia;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+#divBottom{
+    background-color: lightskyblue;
+}
+input[type="submit"], input[type="reset"] {
+    margin: 5px;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(138,188,159,1);
+}
