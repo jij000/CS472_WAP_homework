@@ -9,54 +9,81 @@
 </head>
 
 <body>
-    <h1>Workshop Registration</h1>
+    <div id="divTitle">
+        <span class="head">
+            Workshop Registration
+        </span>
+        <span class="menu">
+            More Actions ▼
+            <div class="drop-down" id="drop-down">
+                <ul>
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <li>Option 4</li>
+                </ul>
+            </div>
+        </span>
+    </div>
+
     <p>Register now while seats are availiable!</p>
     <form>
         <div id="divMain">
-            <div id="divLeft">
-                <label class ="label" for="firstName">First Name</label>
-                <input class ="input" type="text" name="firstName" id="firstName" />
-                </span><label for="lastName">Lasts Name</label>
-                <input type="text" name="lastName" id="lastName" />
-                <label for="company">Company / Institution</label>
-                <input type="text" name="company" id="company" />
-                <label for="address">Address</label>
-                <textarea name="address" id="address" rows="5"></textarea>
-                <label for="city">City</label>
-                <input type="text" name="city" id="city" />
-                <label for="state">State / Province / Region</label>
-                <select name="state" id="state">
-                    <option value="" selected>-Select-</option>
-                    <option>Iowa</option>
-                </select>
-                <label for="country">Country</label>
-                <select name="country" id="country">
-                    <option value="" selected>-Select-</option>
-                    <option>USA</option>
-                </select>
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
-                <label for="phoneNumber">Phone Number</label>
-                <input type="text" name="phoneNumber" id="phoneNumber" />
+            <div id="divCol">
+                <div id="divGrid">
+                    <label class="label" for="firstName">First Name<span class="important">*</span></label>
+                    <input class="input" type="text" name="firstName" id="firstName" />
+                    </span><label for="lastName">Lasts Name<span class="important">*</span></label>
+                    <input type="text" name="lastName" id="lastName" />
+                    <label for="company">Company / Institution<span class="important">*</span></label>
+                    <input type="text" name="company" id="company" />
+                    <label for="address">Address<span class="important">*</span></label>
+                    <textarea name="address" id="address" rows="5"></textarea>
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city" />
+                    <label for="state">State / Province / Region</label>
+                    <select name="state" id="state">
+                        <option value="" selected>-Select-</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Texas">Texas</option>
+                        <option value="New York">New York</option>
+                    </select>
+                    <label for="country">Country</label>
+                    <select name="country" id="country">
+                        <option value="" selected>-Select-</option>
+                        <option value="China">China</option>
+                        <option value="USA">USA</option>
+                    </select>
+                    <label for="email">Email<span class="important">*</span></label>
+                    <input type="text" name="email" id="email" pattern="[a-z0-9._+\-]+@[a-z0-9.\-]+\.[a-z]{2,3}" />
+                    <label for="phoneNumber">Phone Number<span class="important">*</span></label>
+                    <input type="text" name="phoneNumber" id="phoneNumber" pattern="[0-9+\-]{10,16}" />
+                </div>
             </div>
-            <div id="divRight">
-                <p>Lunch</p><p></p>
-                <label for="mealPreference">Meal Preference</label>
-                <select name="mealPreference" id="mealPreference">
-                    <option value="Vegetarian" selected>Vegetarian</option>
-                    <option value="Meat">Meat</option>
-                </select>
-                <p>Payment Details</p><p></p>
-                <label for="paymentMode">Payment Mode</label><p></p>
-                <input type="checkbox" name="cash" value="cash" />cash
-                <input type="checkbox" name="cheque" value="cheque" />cheque
-                <input type="checkbox" name="demandDraft" value="demandDraft" />Demand Draft
-                <label for="chequeNo">DD / Cheque No.</label>
-                <input type="text" name="chequeNo" id="chequeNo" />
-                <label for="drawnOn">Drawn On (Bank Name)</label>
-                <input type="text" name="drawnOn" id="drawnOn" />
-                <label for="payable">Payable at</label>
-                <input type="text" name="payable" id="payable" />
+            <div id="divCol">
+                <div id="divGrid">
+                    <p>Lunch</p>
+                    <p></p>
+                    <label for="mealPreference">Meal Preference</label>
+                    <select name="mealPreference" id="mealPreference">
+                        <option value="Vegetarian" selected>Vegetarian</option>
+                        <option value="Meat">Meat</option>
+                    </select>
+                    <p>Payment Details</p>
+                    <p></p>
+                    <label for="paymentMode">Payment Mode</label>
+                    <div>
+                        <input type="checkbox" name="cash" value="cash" />cash</br>
+                        <input type="checkbox" name="cheque" value="cheque" />cheque</br>
+                        <input type="checkbox" name="demandDraft" value="demandDraft" />Demand Draft</br>
+                    </div>
+                    <label for="chequeNo">DD / Cheque No.</label>
+                    <input type="text" name="chequeNo" id="chequeNo" />
+                    <label for="drawnOn">Drawn On (Bank Name)</label>
+                    <input type="text" name="drawnOn" id="drawnOn" />
+                    <label for="payable">Payable at</label>
+                    <input type="text" name="payable" id="payable" />
+                </div>
             </div>
         </div>
         <div id="divBottom">
