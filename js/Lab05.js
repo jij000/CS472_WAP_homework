@@ -18,28 +18,40 @@ function isVowel(a) {
 }
 
 function sum(arr) {
-    let sum1 = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum1 += arr[i];
-    }
+    // let sum1 = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     sum1 += arr[i];
+    // }
+    // return sum1;
+    let sum1 = arr.reduce(function (prevValue, elem, i, array) {
+        return prevValue + elem;
+    });
     return sum1;
 }
 
 function multiply(arr) {
-    let multiply1 = 1;
-    for (let i = 0; i < arr.length; i++) {
-        multiply1 *= arr[i];
-    }
+    // let multiply1 = 1;
+    // for (let i = 0; i < arr.length; i++) {
+    //     multiply1 *= arr[i];
+    // }
+    // return multiply1;
+    let multiply1 = arr.reduce(function (prevValue, elem, i, array) {
+        return prevValue * elem;
+    });
     return multiply1;
 }
 
 function reverse(str) {
     let str1 = str.split('');
-    let str2 = [];
-    while (str1.length > 0) {
-        str2.push(str1.pop());
-    }
-    return str2.join('');
+    // let str2 = [];
+    // while (str1.length > 0) {
+    //     str2.push(str1.pop());
+    // }
+    // return str2.join('');
+    let str2 = str1.reduce(function (prevValue, elem, i, array) {
+        return prevValue + array[array.length - i - 1];
+    }, '');
+    return str2;
 }
 
 function findLongestWord(arr) {
@@ -53,12 +65,16 @@ function findLongestWord(arr) {
 }
 
 function filterLongWords(arr, n) {
-    let arr1 = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length > n) {
-            arr1.push(arr[i]);
-        }
-    }
+    // let arr1 = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i].length > n) {
+    //         arr1.push(arr[i]);
+    //     }
+    // }
+    // return arr1;
+    let arr1 = arr.filter(function (elem, i, array) {
+        return elem.length > n;
+    });
     return arr1;
 }
 
