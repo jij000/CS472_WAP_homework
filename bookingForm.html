@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>bookingForm</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <link href="css/bookingForm.css" type="text/css" rel="stylesheet" />
+    <script src="js/bookingForm.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="errors">
+    </div>
+    <form action="" method="post" id="bookingForm">
+        <label>Name</label>
+        <input type="text" id="name" name="name" pattern="[a-zA-z]+" title="Must be letter" required />
+        <br />
+        <label>Street</label>
+        <input type="text" id="street" name="street" required />
+        <br />
+        <label>State</label>
+        <select id="state" name="state" required>
+            <option value="" selected>Select One</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Washington">Washington</option>
+            <option value="New York">New York</option>
+        </select>
+        <br />
+        <label>Zip Code</label>
+        <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Must be 5 digit" required />
+        <br />
+        <label>How many seats</label>
+        <input type="text" id="seats" name="seats" pattern="[0-9]{1,}" title="Must be digit" required />
+        <br />
+        <fieldset>
+            <legend>What taxi do you require?</legend>
+            <input type="radio" name='taxiType' value="car" />Car
+            <br />
+            <input type="radio" name='taxiType' value="van" />Van
+            <br />
+            <input type="radio" name='taxiType' value="tuk" />Tuk Tuk
+        </fieldset>
+        <fieldset>
+            <legend>Extras</legend>
+            <input type="checkbox" name='extras' value="babyseat" />Baby Seat
+            <br />
+            <input type="checkbox" name='extras' value="wheelchair" />Wheelchair Access
+            <br />
+            <input type="checkbox" name='extras' value="stock" />Stock Tip
+        </fieldset>
+        <br />
+        <label>Special Instructions</label>
+        <textarea rows=2 name='instruction'></textarea>
+        <br />
+        <input type="submit" name="submit" id="submit" value="Submit Booking" />
+    </form>
+</body>
+
+</html>
